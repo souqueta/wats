@@ -1,0 +1,11 @@
+<!ENTITY watsCookiesTree.title     "Cookies">
+
+<!ENTITY watsCookiesTree.description "You can physically remove cookies which belong to the domains listed below:">
+
+<!ENTITY watsCookiesTree.treecol.domain         "Domain">
+<!ENTITY watsCookiesTree.treecol.name           "Name">
+<!ENTITY watsCookiesTree.treecol.value          "Value">
+<!ENTITY watsCookiesTree.treecol.expiration     "Expiration">
+
+<!ENTITY watsCookiesTree.delete.button     "Delete selected cookies">
+<!ENTITY watsCookiesTree.close.button      "Close">

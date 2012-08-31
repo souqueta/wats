@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<constraints id="xml_data" xmlns="">
+
+<!-- SITE CONTENT -->
+
+
+
+<constraint id="channel" prop="Channel" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="pagename" prop="pageName" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="server" prop="Server" group="siteContent" value="" r="" d="" t="" classified="true" />
+
+<constraint id="h1" prop="h1" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="h2" prop="h2" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="h3" prop="h3" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="h4" prop="h4" group="siteContent" value="" r="" d="" t="" classified="true" />
+<constraint id="h5" prop="h5" group="siteContent" value="" r="" d="" t="" classified="true" />
+
+<!-- GENERAL -->
+
+<constraint id="currencycode" prop="Currency Code" group="general" value="" r="" d="" t="" />
+<constraint id="datacenter" prop="Datacenter" group="general" value="" r="" d="" t="" />
+<constraint id="linktype" prop="Link Type" group="general" value="" r="" d="" t="" />
+<constraint id="namespace" prop="Namespace" group="general" value="" r="" d="" t="" />
+<constraint id="pagetype" prop="PageType" group="general" value="" r="" d="" t="" />
+<constraint id="partyCookie" prop="PartyCookie" group="general" value="" r="" d="" t="" />
+<constraint id="reportSuiteId" prop="ReportSuiteID" group="general" value="" r="" d="" t="" />
+
+
+<!-- CONVERSION VARIABLES -->
+
+<constraint id="v1" prop="v1" group="conversion" value="" r="" d="eVar1" t="" classified="true"/>
+<constraint id="v2" prop="v2" group="conversion" value="" r="" d="eVar2" t="" classified="true"/>
+<constraint id="v3" prop="v3" group="conversion" value="" r="" d="eVar3" t="" classified="true"/>
+<constraint id="v4" prop="v4" group="conversion" value="" r="" d="eVar4" t="" classified="true"/>
+<constraint id="v5" prop="v5" group="conversion" value="" r="" d="eVar5" t="" classified="true"/>
+<constraint id="v6" prop="v6" group="conversion" value="" r="" d="eVar6" t="" classified="true"/>
+<constraint id="v7" prop="v7" group="conversion" value="" r="" d="eVar7" t="" classified="true"/>
+<constraint id="v8" prop="v8" group="conversion" value="" r="" d="eVar8" t="" classified="true"/>
+<constraint id="v9" prop="v9" group="conversion" value="" r="" d="eVar9" t="" classified="true"/>
+<constraint id="v10" prop="v10" group="conversion" value="" r="" d="eVar10" t="" classified="true"/>
+
+<constraint id="v11" prop="v11" group="conversion" value="" r="" d="eVar11" t="" classified="true"/>
+<constraint id="v12" prop="v12" group="conversion" value="" r="" d="eVar12" t="" classified="true"/>
+<constraint id="v13" prop="v13" group="conversion" value="" r="" d="eVar13" t="" classified="true"/>
+<constraint id="v14" prop="v14" group="conversion" value="" r="" d="eVar14" t="" classified="true"/>
+<constraint id="v15" prop="v15" group="conversion" value="" r="" d="eVar15" t="" classified="true"/>
+<constraint id="v16" prop="v16" group="conversion" value="" r="" d="eVar16" t="" classified="true"/>
+<constraint id="v17" prop="v17" group="conversion" value="" r="" d="eVar17" t="" classified="true"/>
+<constraint id="v18" prop="v18" group="conversion" value="" r="" d="eVar18" t="" classified="true"/>
+<constraint id="v19" prop="v19" group="conversion" value="" r="" d="eVar19" t="" classified="true"/>
+<constraint id="v20" prop="v20" group="conversion" value="" r="" d="eVar20" t="" classified="true" />
+
+<constraint id="v21" prop="v21" group="conversion" value="" r="" d="eVar21" t="" classified="true"/>
+<constraint id="v22" prop="v22" group="conversion" value="" r="" d="eVar22" t="" classified="true"/>
+<constraint id="v23" prop="v23" group="conversion" value="" r="" d="eVar23" t="" classified="true"/>
+<constraint id="v24" prop="v24" group="conversion" value="" r="" d="eVar24" t="" classified="true"/>
+<constraint id="v25" prop="v25" group="conversion" value="" r="" d="eVar25" t="" classified="true"/>
+<constraint id="v26" prop="v26" group="conversion" value="" r="" d="eVar26" t="" classified="true"/>
+<constraint id="v27" prop="v27" group="conversion" value="" r="" d="eVar27" t="" classified="true"/>
+<constraint id="v28" prop="v28" group="conversion" value="" r="" d="eVar28" t="" classified="true"/>
+<constraint id="v29" prop="v29" group="conversion" value="" r="" d="eVar29" t="" classified="true"/>
+<constraint id="v30" prop="v30" group="conversion" value="" r="" d="eVar30" t="" classified="true"/>
+
+<constraint id="v31" prop="v31" group="conversion" value="" r="" d="eVar31" t="" classified="true"/>
+<constraint id="v32" prop="v32" group="conversion" value="" r="" d="eVar32" t="" classified="true"/>
+<constraint id="v33" prop="v33" group="conversion" value="" r="" d="eVar33" t="" classified="true"/>
+<constraint id="v34" prop="v34" group="conversion" value="" r="" d="eVar34" t="" classified="true"/>
+<constraint id="v35" prop="v35" group="conversion" value="" r="" d="eVar35" t="" classified="true"/>
+<constraint id="v36" prop="v36" group="conversion" value="" r="" d="eVar36" t="" classified="true"/>
+<constraint id="v37" prop="v37" group="conversion" value="" r="" d="eVar37" t="" classified="true"/>
+<constraint id="v38" prop="v38" group="conversion" value="" r="" d="eVar38" t="" classified="true"/>
+<constraint id="v39" prop="v39" group="conversion" value="" r="" d="eVar39" t="" classified="true"/>
+<constraint id="v40" prop="v40" group="conversion" value="" r="" d="eVar40" t="" classified="true"/>
+
+<constraint id="v41" prop="v41" group="conversion" value="" r="" d="eVar41" t="" classified="true"/>
+<constraint id="v42" prop="v42" group="conversion" value="" r="" d="eVar42" t="" classified="true"/>
+<constraint id="v43" prop="v43" group="conversion" value="" r="" d="eVar43" t="" classified="true"/>
+<constraint id="v44" prop="v44" group="conversion" value="" r="" d="eVar44" t="" classified="true"/>
+<constraint id="v45" prop="v45" group="conversion" value="" r="" d="eVar45" t="" classified="true"/>
+<constraint id="v46" prop="v46" group="conversion" value="" r="" d="eVar46" t="" classified="true"/>
+<constraint id="v47" prop="v47" group="conversion" value="" r="" d="eVar47" t="" classified="true"/>
+<constraint id="v48" prop="v48" group="conversion" value="" r="" d="eVar48" t="" classified="true"/>
+<constraint id="v49" prop="v49" group="conversion" value="" r="" d="eVar49" t="" classified="true"/>
+<constraint id="v50" prop="v50" group="conversion" value="" r="" d="eVar50" t="" classified="true"/>
+
+<constraint id="products" prop="products" group="conversion" value="" r="" d="" t="" classified="true" />
+<constraint id="events" prop="events" group="conversion" value="" r="" d="" t="" classified="true" />
+
+<!-- TRAFFIC VARIABLES -->
+
+<constraint id="c1" prop="c1" group="trafficVariable" value="" r="" d="Prop1" t="" classified="true"/>
+<constraint id="c2" prop="c2" group="trafficVariable" value="" r="" d="Prop2" t="" classified="true"/>
+<constraint id="c3" prop="c3" group="trafficVariable" value="" r="" d="Prop3" t="" classified="true"/>
+<constraint id="c4" prop="c4" group="trafficVariable" value="" r="" d="Prop4" t="" classified="true"/>
+<constraint id="c5" prop="c5" group="trafficVariable" value="" r="" d="Prop5" t="" classified="true"/>
+<constraint id="c6" prop="c6" group="trafficVariable" value="" r="" d="Prop6" t="" classified="true"/>
+<constraint id="c7" prop="c7" group="trafficVariable" value="" r="" d="Prop7" t="" classified="true"/>
+<constraint id="c8" prop="c8" group="trafficVariable" value="" r="" d="Prop8" t="" classified="true"/>
+<constraint id="c9" prop="c9" group="trafficVariable" value="" r="" d="Prop9" t="" classified="true"/>
+<constraint id="c10" prop="c10" group="trafficVariable" value="" r="" d="Prop10" t="" classified="true"/>
+
+<constraint id="c11" prop="c11" group="trafficVariable" value="" r="" d="Prop11" t="" classified="true"/>
+<constraint id="c12" prop="c12" group="trafficVariable" value="" r="" d="Prop12" t="" classified="true"/>
+<constraint id="c13" prop="c13" group="trafficVariable" value="" r="" d="Prop13" t="" classified="true"/>
+<constraint id="c14" prop="c14" group="trafficVariable" value="" r="" d="Prop14" t="" classified="true"/>
+<constraint id="c15" prop="c15" group="trafficVariable" value="" r="" d="Prop15" t="" classified="true"/>
+<constraint id="c16" prop="c16" group="trafficVariable" value="" r="" d="Prop16" t="" classified="true"/>
+<constraint id="c17" prop="c17" group="trafficVariable" value="" r="" d="Prop17" t="" classified="true"/>
+<constraint id="c18" prop="c18" group="trafficVariable" value="" r="" d="Prop18" t="" classified="true"/>
+<constraint id="c19" prop="c19" group="trafficVariable" value="" r="" d="Prop19" t="" classified="true"/>
+<constraint id="c20" prop="c20" group="trafficVariable" value="" r="" d="Prop20" t="" classified="true"/>
+
+<constraint id="c21" prop="c21" group="trafficVariable" value="" r="" d="Prop21" t="" classified="true"/>
+<constraint id="c22" prop="c22" group="trafficVariable" value="" r="" d="Prop22" t="" classified="true"/>
+<constraint id="c23" prop="c23" group="trafficVariable" value="" r="" d="Prop23" t="" classified="true"/>
+<constraint id="c24" prop="c24" group="trafficVariable" value="" r="" d="Prop24" t="" classified="true"/>
+<constraint id="c25" prop="c25" group="trafficVariable" value="" r="" d="Prop25" t="" classified="true"/>
+<constraint id="c26" prop="c26" group="trafficVariable" value="" r="" d="Prop26" t="" classified="true"/>
+<constraint id="c27" prop="c27" group="trafficVariable" value="" r="" d="Prop27" t="" classified="true"/>
+<constraint id="c28" prop="c28" group="trafficVariable" value="" r="" d="Prop28" t="" classified="true"/>
+<constraint id="c29" prop="c29" group="trafficVariable" value="" r="" d="Prop29" t="" classified="true"/>
+<constraint id="c30" prop="c30" group="trafficVariable" value="" r="" d="Prop30" t="" classified="true"/>
+
+<constraint id="c31" prop="c31" group="trafficVariable" value="" r="" d="Prop31" t="" classified="true"/>
+<constraint id="c32" prop="c32" group="trafficVariable" value="" r="" d="Prop32" t="" classified="true"/>
+<constraint id="c33" prop="c33" group="trafficVariable" value="" r="" d="Prop33" t="" classified="true"/>
+<constraint id="c34" prop="c34" group="trafficVariable" value="" r="" d="Prop34" t="" classified="true"/>
+<constraint id="c35" prop="c35" group="trafficVariable" value="" r="" d="Prop35" t="" classified="true"/>
+<constraint id="c36" prop="c36" group="trafficVariable" value="" r="" d="Prop36" t="" classified="true"/>
+<constraint id="c37" prop="c37" group="trafficVariable" value="" r="" d="Prop37" t="" classified="true"/>
+<constraint id="c38" prop="c38" group="trafficVariable" value="" r="" d="Prop38" t="" classified="true"/>
+<constraint id="c39" prop="c39" group="trafficVariable" value="" r="" d="Prop39" t="" classified="true"/>
+<constraint id="c40" prop="c40" group="trafficVariable" value="" r="" d="Prop40" t="" classified="true" />
+
+<constraint id="c41" prop="c41" group="trafficVariable" value="" r="" d="Prop41" t="" classified="true"/>
+<constraint id="c42" prop="c42" group="trafficVariable" value="" r="" d="Prop42" t="" classified="true"/>
+<constraint id="c43" prop="c43" group="trafficVariable" value="" r="" d="Prop43" t="" classified="true"/>
+<constraint id="c44" prop="c44" group="trafficVariable" value="" r="" d="Prop44" t="" classified="true"/>
+<constraint id="c45" prop="c45" group="trafficVariable" value="" r="" d="Prop45" t="" classified="true"/>
+<constraint id="c46" prop="c46" group="trafficVariable" value="" r="" d="Prop46" t="" classified="true"/>
+<constraint id="c47" prop="c47" group="trafficVariable" value="" r="" d="Prop47" t="" classified="true"/>
+<constraint id="c48" prop="c48" group="trafficVariable" value="" r="" d="Prop48" t="" classified="true"/>
+<constraint id="c49" prop="c49" group="trafficVariable" value="" r="" d="Prop49" t="" classified="true"/>
+<constraint id="c50" prop="c50" group="trafficVariable" value="" r="" d="Prop50" t="" classified="true"/>
+
+
+<!-- EVENTS -->
+
+
+<constraint id="event1" prop="event1" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event2" prop="event2" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event3" prop="event3" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event4" prop="event4" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event5" prop="event5" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event6" prop="event6" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event7" prop="event7" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event8" prop="event8" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event9" prop="event9" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event10" prop="event10" group="events" value="" r="" d="" t="" classified="true"/>
+
+<constraint id="event11" prop="event11" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event12" prop="event12" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event13" prop="event13" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event14" prop="event14" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event15" prop="event15" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event16" prop="event16" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event17" prop="event17" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event18" prop="event18" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event19" prop="event19" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event20" prop="event20" group="events" value="" r="" d="" t="" classified="true"/>
+
+<constraint id="event21" prop="event21" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event22" prop="event22" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event23" prop="event23" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event24" prop="event24" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event25" prop="event25" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event26" prop="event26" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event27" prop="event27" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event28" prop="event28" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event29" prop="event29" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event30" prop="event30" group="events" value="" r="" d="" t="" classified="true"/>
+
+<constraint id="event31" prop="event31" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event32" prop="event32" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event33" prop="event33" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event34" prop="event34" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event35" prop="event35" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event36" prop="event36" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event37" prop="event37" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event38" prop="event38" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event39" prop="event39" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="event40" prop="event40" group="events" value="" r="" d="" t="" classified="true" />
+
+<constraint id="prodView" prop="prodView" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="scOpen" prop="scOpen" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="scAdd" prop="scAdd" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="scRemove" prop="scRemove" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="scView" prop="scView" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="scCheckout" prop="scCheckout" group="events" value="" r="" d="" t="" classified="true"/>
+<constraint id="purchase" prop="purchase" group="events" value="" r="" d="" t="" classified="true"/>
+
+
+
+<!-- TEST -->
+
+<constraint id="codeVersions" prop="Code versions" group="test" value="" r="" d="" t="" />
+<constraint id="charset" prop="charSet" group="test" value="" r="" d="" t="" />
+<constraint id="url" prop="URL" group="test" value="" r="" d="" t="" />
+
+<!-- TRAFFIC SOURCE -->
+
+
+<constraint id="v0" prop="v0" group="trafficSource" value="" r="" d="Campaign" t="" />
+<constraint id="referrer" prop="Referrer" group="trafficSource" value="" r="" d="" t="" />
+
+</constraints>

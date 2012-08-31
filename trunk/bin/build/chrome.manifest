@@ -1,0 +1,12 @@
+content   wats                     chrome/content/
+skin      wats       classic/1.0   chrome/skin/
+locale    wats       en-US         chrome/locale/en-US/
+
+#content   wats                 jar:chrome/wats.jar!/content/
+#locale    wats       en-US     jar:chrome/wats.jar!/locale/en-US/
+#skin    wats       classic/1.0     jar:chrome/wats.jar!/skin/
+
+overlay chrome://browser/content/browser.xul chrome://wats/content/watsOverlay.xul
+resource  common      resources/
+
+style   chrome://global/content/customizeToolbar.xul chrome://wats/skin/watsOverlay.css

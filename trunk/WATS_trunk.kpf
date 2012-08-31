@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="949fc636-59bc-e945-8f98-27432844b7ff" kpf_version="4" name="WATS_trunk.kpf">
+<preference-set idref="949fc636-59bc-e945-8f98-27432844b7ff">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>

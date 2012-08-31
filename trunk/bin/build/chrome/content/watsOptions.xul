@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wats/skin/watsOptions.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://wats/locale/watsOptions.dtd">
+
+<dialog
+  id="wats-options"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  title="&watsOptions.window.title;"
+  buttons="accept, cancel"
+  buttonlabelaccept="&watsOptions.buttonaccept.label;"
+  buttonlabelcancel="&watsOptions.buttoncancel.label;"
+  onload="watsOptions.init();"
+  ondialogaccept="watsOptions.savePreferencesChanges();">
+
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsOptions.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsUtils.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsReport.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsSidebarHistory.js"/>
+
+  <groupbox>
+    <hbox>
+      <label value="&watsOptions.history.label;"
+        id="wats-options-history-label" />
+      <textbox type="number" min="5" max="20" increment="5"
+        id="wats-options-history-scale" value="" />
+    </hbox>
+    <spacer height="20" />
+    <checkbox label="&watsOptions.reports.label;"
+       id="reportsTreeCheckbox" />
+  </groupbox>
+</dialog>

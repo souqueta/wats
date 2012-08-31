@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+         - Version: MPL 1.1
+         -
+         - The contents of this file are subject to the Mozilla Public License Version
+         - 1.1 (the "License"); you may not use this file except in compliance with
+         - the License. You may obtain a copy of the License at
+         - http://www.mozilla.org/MPL/
+         -
+         - Software distributed under the License is distributed on an "AS IS" basis,
+         - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+         - for the specific language governing rights and limitations under the
+         - License.
+         -
+         - The Original Code is WATS.
+         -
+         - The Initial Developer of the Original Code is Amédée Souquet.
+         - Portions created by the Initial Developer are Copyright (C) 2010
+         - the Initial Developer. All Rights Reserved.
+         -
+         - Contributor(s):
+         -
+         - ***** END LICENSE BLOCK ***** -->
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://wats/skin/watsConstraintDialog.css"
+  type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://wats/locale/watsConstraintDialog.dtd">
+
+<dialog id="watsConstraintDialog" orient="vertical" flex="1"
+  title="&watsConstraintDialog.title;"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="accept,cancel"
+  ondialogaccept="watsConstraintDialog.onSave();"
+  ondialogcancel="window.close();"
+  onload="watsConstraintDialog.init();">
+
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsConstraintDialog.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsUtils.js"/>
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsSidebar.js"/>
+
+  <vbox>
+    <groupbox>
+      <caption />
+      <description>
+        Select the type of constraint you want to set on this
+        SiteCatalyst parameter.
+      </description>
+    </groupbox>
+    <menulist id="watsConstraintMenulist"
+      oncommand="watsConstraintDialog.menuItemSelected();">
+      <menupopup>
+      <menuitem label="&watsConstraintDialog.menuitem1;" value="1"
+        oncommand="" />
+      <menuitem label="&watsConstraintDialog.menuitem2;" value="2"
+        oncommand="" id="intervalMenuItem"/>
+      <menuitem label="&watsConstraintDialog.menuitem3;" value="3"
+        oncommand="" id="intervalDoubleMenuItem"/>
+      <menuitem label="&watsConstraintDialog.menuitem4;" value="4"
+        id="specificMenuItem"/>
+      <menuitem label="&watsConstraintDialog.menuitem5;" value="5"
+        id="listMenuItem"/>
+      <menuitem label="&watsConstraintDialog.menuitem6;" value="6"
+        id="regexpMenuItem"/>
+      </menupopup>
+    </menulist>
+
+    <vbox id="watsConstraintDefinition">
+    </vbox>
+
+  </vbox>
+</dialog>

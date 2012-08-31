@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:extension:wats@adversitement.nl"
+                   em:version="0.73"
+                   em:updateLink="http://intern.adversitement.nl/amedee/wats.xpi"
+                   em:updateHash="sha256:61f5723bfb0fee7e56c90073a9f4acabf937308158e71785cff55c0c36adbde1"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBADkLkqIEF84Yl+lcFPWwgHWrYy4qR7bYXR2bAJKOHHtjmxfmhREcZjCeAB19pZDWJ5LpFZIY5ylDYnH/Wp09pGtaGQhtOMv7tF1zKKl0WQE1U470rpMy0pKaT050/SLh8dUtjIW/G+tZBIEvO67bqRXUX0a3YTg8nysv89iIBhlT">
+    <em:updates RDF:resource="rdf:#$T8jQ91"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$Y8jQ91"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0a1"
+                   em:maxVersion="4.*"
+                   em:updateLink="http://intern.adversitement.nl/amedee/wats.xpi"
+                   em:updateHash="sha256:61f5723bfb0fee7e56c90073a9f4acabf937308158e71785cff55c0c36adbde1" />
+  <RDF:Description RDF:about="urn:mozilla:extension:wats@adversitement.nl:0.73"
+                   em:version="0.73"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAGJjLxQiSkn4XOtGmqwrtGXtR2/Y24yaKrm1HQMgK0DK4F852xX3EtzIa4N0JmZ6QHmooCCqJWm6RD+Ohw/1fkhO5/wTT5ID/F0Usv0/qa/74C6qtynycA6ED6PC40PxI2IutDxHJBQ9U+fKd41Y4sQBMGvUXPB529ktnsz6dNG/">
+    <em:targetApplication RDF:resource="rdf:#$Y8jQ91"/>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf:#$T8jQ91">
+    <RDF:li RDF:resource="urn:mozilla:extension:wats@adversitement.nl:0.73"/>
+  </RDF:Seq>
+</RDF:RDF>

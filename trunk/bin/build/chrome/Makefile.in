@@ -1,0 +1,72 @@
+##
+# Copyright (c) 2007-2010 Glubble BV. All rights reserved.
+# Note that Glubble BV is in the process of reviewing the Glubble code base and
+# will decide on a per file basis what will have an Open Source license
+# applied to it. Pending this decision the copyright notice prevails.
+##
+
+# The location where the JAR file will be created.
+jar_target_dir := $(build_dir)/chrome
+
+# The main chrome JAR file.
+chrome_jar_file := $(jar_target_dir)/$(extension_name).jar
+
+# The root of the JAR sources.
+jar_source_root := chrome
+
+# The sources for the JAR file.
+jar_sources := $(wildcard $(jar_source_root)/content/*/*.js) \
+               $(wildcard $(jar_source_root)/content/*/*.html) \
+               $(wildcard $(jar_source_root)/content/*/*/*.js) \
+               $(wildcard $(jar_source_root)/content/*/*/*/*.js) \
+               $(wildcard $(jar_source_root)/content/*.xul) \
+               $(wildcard $(jar_source_root)/content/*/*.xul) \
+               $(wildcard $(jar_source_root)/content/*/*/*.xul) \
+               $(wildcard $(jar_source_root)/content/*/*/*/*.xul) \
+               $(wildcard $(jar_source_root)/content/*/*.xml) \
+               $(wildcard $(jar_source_root)/content/*/*/*.xml) \
+               $(wildcard $(jar_source_root)/content/*/*/*/*.xml) \
+               $(wildcard $(jar_source_root)/content/*/*.css) \
+               $(wildcard $(jar_source_root)/content/*/*/*.css) \
+               $(wildcard $(jar_source_root)/content/*/*/*/*.css) \
+                $(wildcard $(jar_source_root)/content/*/*.png) \
+               $(wildcard $(jar_source_root)/skin/*.css) \
+               $(wildcard $(jar_source_root)/skin/*/*.css) \
+               $(wildcard $(jar_source_root)/skin/*/*/*.css) \
+               $(wildcard $(jar_source_root)/skin/*/*/*.swf) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*.css) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*/*.css) \
+               $(wildcard $(jar_source_root)/skin/*/*.png) \
+               $(wildcard $(jar_source_root)/skin/*/*/*.png) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*.png) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*/*.png) \
+               $(wildcard $(jar_source_root)/skin/*/*.jpg) \
+               $(wildcard $(jar_source_root)/skin/*/*/*.jpg) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*.jpg) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*/*.jpg) \
+               $(wildcard $(jar_source_root)/skin/*/*.gif) \
+               $(wildcard $(jar_source_root)/skin/*/*/*.gif) \
+               $(wildcard $(jar_source_root)/skin/*/*/*/*.gif) \
+               $(wildcard $(jar_source_root)/locale/*/*/*.dtd) \
+               $(wildcard $(jar_source_root)/locale/*/*.dtd) \
+               $(wildcard $(jar_source_root)/locale/*.dtd) \
+               $(wildcard $(jar_source_root)/locale/*/*/*.properties) \
+               $(wildcard $(jar_source_root)/locale/*/*/*/*.properties) \
+               $(wildcard $(jar_source_root)/locale/*/*/*.xhtml) \
+               $(wildcard $(jar_source_root)/locale/*/*/*/*.xhtml)
+
+jar_sources_no_dir := $(subst $(jar_source_root)/,,$(jar_sources))
+
+$(chrome_jar_file): $(jar_target_dir) $(jar_sources)
+	@echo "Creating chrome JAR file."
+	@cd $(jar_source_root); $(ZIP) ../$(chrome_jar_file) $(jar_sources_no_dir)
+	@echo "Creating chrome JAR file. Done!"
+	@jar xf $(chrome_jar_file);
+	@echo "Extracted JAR files. Done!"
+
+$(jar_target_dir): $(build_dir)
+	@if [ ! -x $(jar_target_dir) ]; \
+  then \
+    mkdir $(jar_target_dir); \
+  fi
+	@cp -Rf chrome/ $(build_dir)/chrome

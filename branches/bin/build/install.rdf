@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$V9q8I3"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0pre"
+                   em:maxVersion="4.0.*" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="wats@adversitement.nl"
+                   em:name="WATS"
+                   em:version="0.31"
+                   em:creator="Adversitement"
+                   em:description="Web Analytics Testing Solution"
+                   em:homepageURL="http://www.adversitement.com/wats/"
+                   em:iconURL="chrome://wats/skin/images/icon32.png">
+    <em:targetApplication RDF:resource="rdf:#$V9q8I3"/>
+    <em:file RDF:resource="urn:mozilla:extension:file:"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:mozilla:extension:file:"
+                   em:package="content/"
+                   em:locale="locale/en-US/" />
+</RDF:RDF>

@@ -1,0 +1,65 @@
+<!ENTITY watsSidebar.sidebar.title             "SiteCatalyst variables visualization">
+
+<!ENTITY watsSidebar.menu.title                "WATS">
+<!ENTITY watsSidebar.menu.constraints          "Descriptions">
+<!ENTITY watsSidebar.menu.constraint           "Set Descriptions">
+<!ENTITY watsSidebar.menu.scenario             "Open Selenium TestCase">
+<!ENTITY watsSidebar.menu.quit                 "Quit">
+<!ENTITY watsSidebar.menu.toggleHistory        "Toggle History">
+<!ENTITY watsSidebar.menu.deleteCookies        "Delete Cookies">
+<!ENTITY watsSidebar.menu.seeCookies           "Cookies">
+<!ENTITY watsSidebar.menu.preferences          "Preferences">
+<!ENTITY watsSidebar.menu.exportToHTML         "Export tree to HTML">
+<!ENTITY watsSidebar.menu.exportConstraints    "Export constraints">
+<!ENTITY watsSidebar.menu.importConstraints    "Import constraints">
+<!ENTITY watsSidebar.menu.exportScenarios      "Export scenarios">
+<!ENTITY watsSidebar.menu.importScenarios      "Import scenarios">
+<!ENTITY watsSidebar.menu.scenarios            "Scenarios">
+
+<!ENTITY watsSidebar.context.label             "Copy data to clipboard">
+<!ENTITY watsSidebar.sidebar.tab1              "Default">
+<!ENTITY watsSidebar.sidebar.tab2              "SC Visualizer">
+<!ENTITY watsSidebar.noresult.label1           "No SiteCatalyst request have been ">
+<!ENTITY watsSidebar.noresult.label2           "discovered. Reload tabs if you want ">
+<!ENTITY watsSidebar.noresult.label3           "to visualize SiteCatalyst data.">
+<!ENTITY watsSidebar.treecol1.label            "Variable">
+<!ENTITY watsSidebar.treecol1.label.tooltip    "The SiteCatalyst property.">
+<!ENTITY watsSidebar.treecol2.label            "Value">
+<!ENTITY watsSidebar.treecol2.label.tooltip    "The SiteCatalyst value for this property.">
+<!ENTITY watsSidebar.sidebar.button1           "Set descriptions and constraints">
+<!ENTITY watsSidebar.sidebar.button2           "Open scenario file">
+
+<!ENTITY watsSidebar.history.label                        "History:">
+<!ENTITY watsSidebar.history.clearHistory.label           "Clear History">
+<!ENTITY watsSidebar.historyURL.label                     "ReportSuiteID - PageName">
+<!ENTITY watsSidebar.historyURL.tooltip                   "The URL of the request.">
+<!ENTITY watsSidebar.historyTime.label                    "Time">
+<!ENTITY watsSidebar.historyTime.tooltip                  "Time when the request has been performed.">
+<!ENTITY watsSidebar.historyID.label                      "ID">
+<!ENTITY watsSidebar.historyID.tooltip                    "The ID of the request.">
+<!ENTITY watsSidebar.historyType.label                    "Link">
+<!ENTITY watsSidebar.historyType.tooltip                  "The type of the link.">
+<!ENTITY watsSidebar.context.clearHistory.label           "Clear All History">
+<!ENTITY watsSidebar.context.copyItemURLToClipBoard.label "Copy SC URL to clipboard">
+
+<!ENTITY wats.sidebar.history.legend.custom            "= Custom Link">
+<!ENTITY wats.sidebar.history.legend.download          "= Download">
+<!ENTITY wats.sidebar.history.legend.exit              "= Exit link">
+
+<!ENTITY wats.sidebar.tree.category.general            "GENERAL">
+<!ENTITY wats.sidebar.tree.category.site               "SITE CONTENT">
+<!ENTITY wats.sidebar.tree.category.traffics           "TRAFFIC SOURCE">
+<!ENTITY wats.sidebar.tree.category.conversion         "CONVERSION VARIABLES">
+<!ENTITY wats.sidebar.tree.category.trafficv           "TRAFFIC VARIABLES">
+<!ENTITY wats.sidebar.tree.category.test               "TEST">
+
+<!ENTITY wats.sidebar.file.menu.access.key              "W">
+<!ENTITY wats.sidebar.toggle.history.accesskey          "T">
+<!ENTITY wats.sidebar.constraints.menuitem.accesskey    "S">
+<!ENTITY wats.sidebar.cookies.menuitem.accesskey        "C">
+<!ENTITY wats.sidebar.export.menuitem.accesskey         "E">
+<!ENTITY wats.sidebar.menu.quit.accesskey               "Q">
+
+<!ENTITY watsSidebar.historyFilter.label                  "Filter History">
+
+<!ENTITY watsSidebar.campaign.label                       "Campaign">

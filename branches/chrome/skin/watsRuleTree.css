@@ -1,0 +1,88 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is WATS.
+ *
+ * The Initial Developer of the Original Code is Amédée Souquet.
+ * Portions created by the Initial Developer are Copyright (C) 2010
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+treechildren::-moz-tree-row(selected)            { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd)                 { background-color: #FFFFFF; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(variable)      { color: #000000; font-weight: bold; }
+treechildren::-moz-tree-cell-text(selected)      { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+treechildren::-moz-tree-cell-text(category)      { color: #FFFFFF; font-size: 80%; }
+
+
+treechildren::-moz-tree-row(container)            {
+  background-color: #70A100;
+  color: #FFFFFF;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  }
+treechildren::-moz-tree-image()    { margin-right: 10px; }
+
+
+
+#watsRuleTreeNamespaceDescr {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#watsRuleTreeReportSuiteDescr {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#watsRuleTreeButtonHbox {
+  margin-top: 15px;
+}
+
+#watsRuleTreeWindow {
+  width: 500px;
+  height: 700px;
+}
+
+#wats-rule-tree-top-hbox {
+  margin-bottom: 20px;
+}
+
+#rulesTree {
+  width: 450px;
+  height: 460px;
+  margin-top: 25px;
+}
+
+#prop {
+  min-width: 150px;
+  max-width: 150px;
+}
+
+#value {
+  width: 150px;
+}
+
+#constraint {
+  width: 100px;
+}
+
+#watsRuleTreeGroupbox {
+  width: 400px;
+  margin-top:20px;
+}

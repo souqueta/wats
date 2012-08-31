@@ -1,0 +1,152 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is WATS.
+ *
+ * The Initial Developer of the Original Code is Amédée Souquet.
+ * Portions created by the Initial Developer are Copyright (C) 2010
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+#wats-sidebar-menubar {
+  margin-bottom: 10px;
+  color: black !important;
+}
+
+menubutton, menulist, menu {
+  color: black !important;
+}
+
+menubar {
+  /* Added so it fits to the new defined vbox background-color */
+  -moz-appearance: none !important;
+  background-color: #BDBDBD !important;
+}
+
+menu:hover {
+  -moz-appearance: none !important;
+  background-color: #E6E6E6;
+}
+
+#wats-sidebar-top-vbox {
+  background-color: #BDBDBD;
+  -moz-appearance: none !important;
+}
+
+#watsSidebarTree {
+  width: 700px !important;
+  height: 300px;
+}
+
+treechildren::-moz-tree-image(src) {
+  margin-left: 10px;
+  height : 13px;
+  width : 13px;
+}
+
+treechildren::-moz-tree-row(selected)            { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd)                 { background-color: #FFFFFF; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(container, category) { background-color: #70A100; }
+treechildren::-moz-tree-cell-text(selected)      { color: #000000; }
+treechildren::-moz-tree-cell-text(variable)      { color: #000000; font-weight: bold; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+treechildren::-moz-tree-cell-text(time)          { font-weight: bold; color: #70A100 } /* Navy*/
+treechildren:-moz-tree-row(statusredmoz)         { background: #FF6633; }
+treechildren::-moz-tree-cell-text(category)      { color: #FFFFFF; font-size: 80%;}
+
+#value {
+  min-width: 200px;
+}
+
+#prop {
+  min-width: 150px;
+  max-width: 150px;
+}
+
+#wats-sidebar-openInNewWindow-icon {
+  margin-right: 8px;
+  margin-top: 4px;
+  max-width: 16px;
+  max-height: 16px;
+}
+
+#wats-sidebar-campaign-value {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*max-width: 250px;*/
+}
+
+.wats-sidebar-history-legend-image {
+  max-height: 13px;
+  max-width: 13px;
+}
+
+#watsSidebarHistoryTree {
+  width: 80px;
+  height: 70px;
+}
+
+#wats-sidebar-history-filter-label {
+  margin-top: 7px;
+}
+
+#wats-sidebar-history-filter {
+  margin-top: 10px;
+  max-height: 30px;
+  min-height: 30px;
+}
+
+.wats-sidebar-splitter {
+  margin-top: 10px;
+}
+
+#wats-sidebar-history-legend-hbox{
+  margin-left: 10px;
+}
+
+#history-url {
+  width: 280px;
+  text-align : left;
+}
+
+#history-time {
+  width: 58px;
+  text-align : left;
+}
+
+#history-type {
+  width: 35px;
+  text-align : left;
+}
+
+.horizontal-spacer {
+  width: 10px;
+}
+
+.vertical-spacer {
+  height: 10px;
+}
+
+#wats-sidebar-noresult-label {
+  font-size: 150%;
+}
+
+#wats-sidebar-reload-image {
+  margin-bottom: 40px;
+  width: 70px;
+  height: 70px;
+}

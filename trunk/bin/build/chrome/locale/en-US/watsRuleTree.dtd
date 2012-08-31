@@ -1,0 +1,30 @@
+<!ENTITY watsRuleTree.title       "Set SiteCatalyst variables descriptions">
+
+<!ENTITY watsRuleTree.top.hbox.namespace               "Namespace:">
+<!ENTITY watsRuleTree.top.hbox.reportsuite             "Report Suite ID:">
+
+<!ENTITY watsRuleTree.context.menuitem1       "Set constraint for this item">
+<!ENTITY watsRuleTree.context.menuitem2       "Remove constraint for this item">
+
+<!ENTITY watsRuleTree.groupbox.title          "You can either:">
+<!ENTITY watsRuleTree.groupbox.descr1          "Change the name of a variable double clicking on its description.">
+<!ENTITY watsRuleTree.groupbox.descr2          "Set a Report Suite ID constraint using items contextual menus.">
+
+<!ENTITY watsRuleTree.button.save.label       "Save">
+<!ENTITY watsRuleTree.button.cancel.label     "Cancel">
+
+<!ENTITY watsRuleTree.treecol.property.label     "Variable">
+<!ENTITY watsRuleTree.treecol.description.label     "Description">
+<!ENTITY watsRuleTree.treecol.constraint.label     "Constraint?">
+
+<!ENTITY watsRuleTree.tree.category.general            "GENERAL">
+<!ENTITY watsRuleTree.tree.category.site               "SITE CONTENT">
+<!ENTITY watsRuleTree.tree.category.traffics           "TRAFFIC SOURCE">
+<!ENTITY watsRuleTree.tree.category.conversion         "CONVERSION VARIABLES">
+<!ENTITY watsRuleTree.tree.category.trafficv           "TRAFFIC VARIABLES">
+<!ENTITY watsRuleTree.tree.category.events             "EVENTS">
+<!ENTITY watsRuleTree.tree.category.test               "TEST">
+
+<!ENTITY watsRuleTree.tooltip.property.label        "The SiteCatalyst variable name.">
+<!ENTITY watsRuleTree.tooltip.description.label     "The description replacing the variable name.">
+<!ENTITY watsRuleTree.tooltip.constraint.label      "If there is a constraint or not on this variable.">

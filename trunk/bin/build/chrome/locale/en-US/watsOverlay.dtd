@@ -1,0 +1,9 @@
+<!ENTITY watsOverlay.sidebar.label              "WATS sidebar">
+<!ENTITY watsOverlay.sidebar.title              "SiteCatalyst variables visualization">
+
+<!ENTITY watsOverlay.sidebar.toggle              "Toggle WATS">
+<!ENTITY watsOverlay.sidebar.window              "Open in own window">
+
+<!ENTITY watsOverlay.menuitem.label             "WATS">
+<!ENTITY watsOverlay.toolbarbutton.label        "WATS">
+<!ENTITY watsOverlay.toolbarbutton.tooltip      "WATS">

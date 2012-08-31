@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+         - Version: MPL 1.1
+         -
+         - The contents of this file are subject to the Mozilla Public License Version
+         - 1.1 (the "License"); you may not use this file except in compliance with
+         - the License. You may obtain a copy of the License at
+         - http://www.mozilla.org/MPL/
+         -
+         - Software distributed under the License is distributed on an "AS IS" basis,
+         - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+         - for the specific language governing rights and limitations under the
+         - License.
+         -
+         - The Original Code is WATS.
+         -
+         - The Initial Developer of the Original Code is Amédée Souquet.
+         - Portions created by the Initial Developer are Copyright (C) 2010
+         - the Initial Developer. All Rights Reserved.
+         -
+         - Contributor(s):
+         -
+         - ***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://wats/skin/watsRuleTree.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://wats/locale/watsRuleTree.dtd">
+
+<window id="watsRuleTreeWindow" orient="vertical" flex="1"
+ title="&watsRuleTree.title;"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+ onload="watsRuleTree.init();">
+
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsRuleTree.js" />
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsSidebar.js" />
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsReport.js" />
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsSidebarSC.js" />
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsUtils.js" />
+
+  <popupset>
+   <popup id="watsRuleTreeContextMenu"
+      onpopupshowing="watsRuleTree.onPopUpShowing();">
+      <menuitem id="openContraintMenuItem"
+        label="&watsRuleTree.context.menuitem1;"
+        oncommand="watsRuleTree.openConstraintDialog();" />
+      <menuitem id="removeConstraintMenuItem"
+        label="&watsRuleTree.context.menuitem2;"
+        oncommand="watsRuleTree.removeConstraint();" />
+   </popup>
+  </popupset>
+
+  <vbox align="center">
+    <groupbox id="watsRuleTreeGroupbox">
+      <caption />
+      <hbox id="wats-rule-tree-top-hbox">
+        <label value="&watsRuleTree.top.hbox.namespace;"
+          id="watsRuleTreeNamespaceDescr" />
+        <label value="" id="watsRuleTreeNamespace" />
+        <spacer />
+        <label value="&watsRuleTree.top.hbox.reportsuite;"
+          id="watsRuleTreeReportSuiteDescr" />
+        <label value="" id="watsRuleTreeReportSuite" />
+      </hbox>
+      <hbox>
+       <image src="chrome://wats/skin/images/warning.png" />
+       <label value="&watsRuleTree.groupbox.descr1;"
+          style="margin-top: 5px;"/>
+      </hbox>
+      <label value="" />
+    </groupbox>
+
+    <tree id="rulesTree" flex="1" seltype="multiple"
+      hidecolumnpicker="true" 
+      editable="true">
+
+      <treecols>
+        <treecol id="prop" primary="true" flex="1"
+          label="&watsRuleTree.treecol.property.label;"
+          tooltiptext="&watsRuleTree.tooltip.property.label;" />
+        <splitter class="tree-splitter" />
+        <treecol id="value" flex="1"
+          label="&watsRuleTree.treecol.description.label;"
+          tooltiptext="&watsRuleTree.tooltip.description.label;"/>
+        <splitter class="tree-splitter" />
+        <treecol id="constraint" cycler="true" type="checkbox"
+          label="&watsRuleTree.treecol.constraint.label;" hidden="true"
+          tooltiptext="&watsRuleTree.tooltip.constraint.label;" />
+      </treecols>
+
+      <treechildren id="watsSidebarTreeChildren">
+
+        <treeitem container="true" open="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.general;"
+              editable="false" properties="category" />
+            <treecell/>
+          </treerow>
+          <treechildren id="general">
+
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true" open="true" >
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.site;"
+              editable="false" properties="category" />
+            <treecell />
+          </treerow>
+          <treechildren id="siteContent">
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true" open="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.traffics;"
+              editable="false" properties="category" />
+            <treecell/>
+          </treerow>
+          <treechildren id="trafficSource">
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.conversion;"
+              editable="false" properties="category" />
+            <treecell />
+          </treerow>
+          <treechildren id="conversionVariables">
+
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.trafficv;"
+              editable="false" properties="category" />
+            <treecell/>
+          </treerow>
+          <treechildren id="trafficVariables">
+
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.events;"
+              editable="false" properties="category"/>
+            <treecell/>
+          </treerow>
+          <treechildren id="events">
+
+          </treechildren>
+        </treeitem>
+
+        <treeitem container="true" open="true">
+          <treerow editable="false">
+            <treecell label="&watsRuleTree.tree.category.test;"
+              editable="false" properties="category" />
+            <treecell/>
+          </treerow>
+          <treechildren id="test">
+
+          </treechildren>
+        </treeitem>
+      </treechildren>
+     </tree>
+
+     <hbox id="watsRuleTreeButtonHbox">
+       <button label="&watsRuleTree.button.save.label;"
+         onclick="watsRuleTree.checkForChanges(event);
+          watsRuleTree.closeWindow()" />
+       <button label="&watsRuleTree.button.cancel.label;"
+         onclick="watsRuleTree.closeWindow();" />
+     </hbox>
+
+  </vbox>
+</window>

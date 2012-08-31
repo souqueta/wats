@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+         - Version: MPL 1.1
+         -
+         - The contents of this file are subject to the Mozilla Public License Version
+         - 1.1 (the "License"); you may not use this file except in compliance with
+         - the License. You may obtain a copy of the License at
+         - http://www.mozilla.org/MPL/
+         -
+         - Software distributed under the License is distributed on an "AS IS" basis,
+         - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+         - for the specific language governing rights and limitations under the
+         - License.
+         -
+         - The Original Code is WATS.
+         -
+         - The Initial Developer of the Original Code is Amédée Souquet.
+         - Portions created by the Initial Developer are Copyright (C) 2010
+         - the Initial Developer. All Rights Reserved.
+         -
+         - Contributor(s):
+         -
+         - ***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin/xul.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://wats/skin/watsSidebar.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://wats/locale/watsSidebar.dtd">
+
+<window id="WATS" orient="vertical" flex="1" title="&watsSidebar.sidebar.title;"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+ windowtype="wats" onload="watsSidebar.init();"
+ onunload="watsSidebar.uninit();">
+
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsSidebarHistory.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsSidebar.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsSidebarIO.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsReport.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsSidebarSC.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsCookiesTree.js"/>
+  <script type="application/javascript"
+    src="chrome://wats/content/js/watsRuleTree.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsUtils.js"/>
+  <script type="application/x-javascript"
+    src="chrome://wats/content/js/watsUninstall.js" />
+
+  <vbox flex="1" id="wats-sidebar-top-vbox">
+  <menubar id="wats-sidebar-menubar">
+    <menu id="wats-sidebar-file-menu" label="&watsSidebar.menu.title;"
+     accesskey="&wats.sidebar.file.menu.access.key;">
+      <menupopup id="file-popup"
+        onpopupshowing="watsSidebar.fileOnPopupShowing();">
+        <menuitem id="wats-sidebar-toggle-history"
+          label="&watsSidebar.menu.toggleHistory;" type="checkbox"
+          checked="true" oncommand="watsSidebar.toggleHistory();"
+          accesskey="&wats.sidebar.toggle.history.accesskey;" />
+        <menuitem id="wats-sidebar-constraints-menuitem"
+          label="&watsSidebar.menu.constraint;"
+          oncommand="watsSidebar.openTree();"
+          accesskey="&wats.sidebar.constraints.menuitem.accesskey;" />
+         <menuitem label="&watsSidebar.menu.seeCookies;"
+          id="wats-sidebar-cookies-menuitem"
+          oncommand="watsSidebar.openCookiesDialog();"
+          accesskey="&wats.sidebar.cookies.menuitem.accesskey;" />
+        <menuitem id="wats-sidebar-export-menuitem"
+          label="&watsSidebar.menu.exportToHTML;"
+          oncommand="watsSidebarIO.exportTreeValuesToHTML();"
+          accesskey="&wats.sidebar.export.menuitem.accesskey;" />
+        <menuitem label="&watsSidebar.menu.quit;"
+          oncommand="watsSidebar.quit();"
+          accesskey="&wats.sidebar.menu.quit.accesskey;" />
+      </menupopup>
+    </menu>
+
+    <menu id="wats-sidebar-constraints-menu" hidden="true"
+      label="&watsSidebar.menu.constraints;">
+      <menupopup id="constraints-popup"
+        onpopupshowing="watsSidebar.constraintsOnPopupShowing();">
+        <menuitem id="wats-sidebar-constraints-menuitem"
+          label="&watsSidebar.menu.constraint;"
+          oncommand="watsSidebar.openTree();"/>
+        <menuitem id="wats-sidebar-export-constraints-menuitem"
+          label="&watsSidebar.menu.exportConstraints;"
+          oncommand="watsSidebarIO.exportConstraints();" />
+        <menuitem id="wats-sidebar-import-constraints-menuitem"
+          label="&watsSidebar.menu.importConstraints;"
+          oncommand="watsSidebarIO.importConstraints();" />
+      </menupopup>
+    </menu>
+
+    <menu id="wats-sidebar-scenarios-menu" hidden="true"
+      label="&watsSidebar.menu.scenarios;">
+      <menupopup id="scenarios-popup"
+        onpopupshowing="watsSidebar.scenariosOnPopupShowing();">
+        <menuitem id="wats-sidebar-scenario-menuitem"
+          label="&watsSidebar.menu.scenario;"
+          oncommand="watsSidebar.openScenarioTree();"/>
+        <menuitem id="wats-sidebar-export-scenarios-menuitem"
+          label="&watsSidebar.menu.exportScenarios;"
+          oncommand="watsSidebarIO.exportScenarios();" />
+        <menuitem id="wats-sidebar-import-scenarios-menuitem"
+          label="&watsSidebar.menu.importScenarios;"
+          oncommand="watsSidebarIO.importScenarios();" />
+      </menupopup>
+    </menu>
+
+    <spacer flex="1" />
+    <image
+      id="wats-sidebar-openInNewWindow-icon"
+      src="chrome://wats/skin/images/newWindowIcon.png"
+      onload="if (Application.storage.get('currentType', 'default')
+       == 'window') {
+        this.setAttribute('src', 'null');
+        this.src = 'null';
+      }"
+      onclick="watsSidebar.onNewWindowButtonClick(event);"
+      onmouseover="this.setAttribute(
+       'src', 'chrome://wats/skin/images/newwindowicon_over.png');"
+      onmouseout="this.setAttribute(
+       'src', 'chrome://wats/skin/images/newwindowicon.png');"/>
+  </menubar>
+
+    <popupset>
+    <popup id="watsSidebarTreeContextMenu">
+      <menuitem label="&watsSidebar.context.label;"
+        id="watsSidebarTreeContextMenuItem"
+        oncommand="watsSidebar.copyToClipboard(event);"/>
+    </popup>
+
+    <popup id="watsSidebarHistoryTreeContextMenu">
+      <menuitem label="&watsSidebar.context.copyItemURLToClipBoard.label;"
+        oncommand="watsSidebar.copyItemURLToClipBoard();"/>
+      <menuitem label="&watsSidebar.context.clearHistory.label;"
+        oncommand="watsSidebarHistory.clearAllHistory();"/>
+    </popup>
+  </popupset>
+
+  <tooltip id="history-tree-tooltip">
+    <vbox id="wats-sidebar-history-legend-hbox">
+      <spacer class="vertical-spacer" />
+      <hbox>
+        <image src="chrome://wats/skin/images/yellow.png"
+          class="wats-sidebar-history-legend-image" />
+        <label value="&wats.sidebar.history.legend.custom;" />
+      </hbox>
+      <spacer class="horizontal-spacer" />
+      <hbox>
+        <image src="chrome://wats/skin/images/red.png"
+          class="wats-sidebar-history-legend-image" />
+        <label value="&wats.sidebar.history.legend.download;" />
+      </hbox>
+        <spacer class="horizontal-spacer" />
+      <hbox>
+        <image src="chrome://wats/skin/images/black.png"
+          class="wats-sidebar-history-legend-image"/>
+        <label value="&wats.sidebar.history.legend.exit;" />
+      </hbox>
+      <spacer class="vertical-spacer" />
+    </vbox>
+  </tooltip>
+
+  <vbox flex="1" align="center">
+    <label id="wats-sidebar-campaign-value" hidden="true" />
+    <tabbox orient="vertical" flex="1">
+      <tabs id="idTabs">
+        <tab id="watsMainTab" label="&watsSidebar.sidebar.tab1;" crop="end"
+          selected="true" collapsed="true" />
+        <tab id="watsVisualizationTab" label="&watsSidebar.sidebar.tab2;"
+          crop="end" disabled="true" collapsed="true" />
+      </tabs>
+
+      <tabpanels id="watsTabPanels" flex="1">
+
+        <tabpanel>
+         <vbox flex="1" align="center">
+           <spacer flex="1" />
+           <image src="chrome://wats/skin/images/reload.png"
+             id="wats-sidebar-reload-image" />
+           <label value="&watsSidebar.noresult.label1;"
+              id="wats-sidebar-noresult-label" />
+           <label value="&watsSidebar.noresult.label2;"
+             id="wats-sidebar-noresult-label" />
+           <label value="&watsSidebar.noresult.label3;"
+             id="wats-sidebar-noresult-label" />
+           <spacer flex="2" />
+         </vbox>
+        </tabpanel>
+
+       <tabpanel id="watsVisualizationTabPanel">
+          <vbox flex="1">
+           <!-- TODO : remove the flex here. -->
+            <vbox flex="1" id="wats-sidebar-main-box" align="center">
+              <tree id="watsSidebarTree" flex="1" seltype="multiple"
+                hidecolumnpicker="true" context="watsSidebarTreeContextMenu">
+              <treecols>
+                <treecol id="prop" primary="true" editable="true"
+                  label="&watsSidebar.treecol1.label;" flex="1"
+                  tooltiptext="&watsSidebar.treecol1.label.tooltip;"/>
+                <splitter class="tree-splitter"/>
+                <treecol id="value" flex="1" label="&watsSidebar.treecol2.label;"
+                  tooltiptext="&watsSidebar.treecol2.label.tooltip;"/>
+              </treecols>
+              <treechildren id="watsSidebarTreeChildren">
+                <treeitem  id="generalContainer" container="true" open="true"
+                  persist="open" >
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.general;"
+                      properties="category" />
+                    <treecell/>
+                  </treerow>
+                  <treechildren id="general">
+                  </treechildren>
+                </treeitem>
+
+                <treeitem id="siteContentContainer" container="true"
+                  open="true" persist="open">
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.site;"
+                      properties="category"/>
+                    <treecell/>
+                  </treerow>
+                  <treechildren id="siteContent">
+                  </treechildren>
+                </treeitem>
+
+                 <treeitem id="trafficSourceContainer" container="true"
+                    open="true" persist="open">
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.traffics;"
+                      properties="category"/>
+                    <treecell/>
+                  </treerow>
+                  <treechildren id="trafficSource">
+                  </treechildren>
+                </treeitem>
+                <!-- We leave this item closed because
+                usually taking a lot of space -->
+                <treeitem container="true" persist="open">
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.conversion;"
+                       properties="category"/>
+                    <treecell />
+                  </treerow>
+                  <treechildren id="conversionVariables">
+                  </treechildren>
+                </treeitem>
+                <!-- We leave this item closed because usually
+                taking a lot of space -->
+                <treeitem container="true" persist="open">
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.trafficv;"
+                      properties="category" />
+                    <treecell/>
+                  </treerow>
+                  <treechildren id="trafficVariables">
+                  </treechildren>
+                </treeitem>
+
+                <treeitem id="testContainer" container="true" open="true"
+                  persist="open" category="true">
+                  <treerow properties="category">
+                    <treecell label="&wats.sidebar.tree.category.test;"
+                      properties="category" />
+                    <treecell/>
+                  </treerow>
+                  <treechildren id="test">
+                  </treechildren>
+                </treeitem>
+
+              </treechildren>
+            </tree>
+
+          </vbox>
+
+          <splitter class="wats-sidebar-splitter"/>
+          <!-- The box dedicated to history of requests. -->
+          <hbox id="wats-sidebar-history-filter">
+              <textbox id="wats-sidebar-history-filter-textbox" type="search"
+                searchbutton="true"
+                oncommand="watsSidebarHistory.filterHistory();"
+                oninput="watsSidebarHistory.filterHistory();"
+                onkeypress="watsSidebarHistory.onFilterKeyPress(event);" />
+              <spacer flex="1" />
+              <button label="&watsSidebar.history.clearHistory.label;"
+                oncommand="watsSidebarHistory.clearAllHistory();" />
+            </hbox>
+
+          <vbox id="wats-sidebar-history-vbox" flex="1">
+            <tree id="watsSidebarHistoryTree"
+              hidecolumnpicker="true" flex="1"
+              onclick="watsSidebarHistory.loadHistoryItem();"
+              context="watsSidebarHistoryTreeContextMenu">
+              <treecols>
+                <treecol id="history-time" label="&watsSidebar.historyTime.label;"
+                  tooltiptext="&watsSidebar.historyTime.tooltip;"
+                  editable="false" />
+                <splitter class="tree-splitter"/>
+                <treecol id="history-url" label="&watsSidebar.historyURL.label;"
+                  tooltiptext="&watsSidebar.historyURL.tooltip;"
+                  editable="false" flex="1" />
+                <splitter class="tree-splitter"/>
+                <treecol id="history-id" primary="true"
+                 label="&watsSidebar.historyID.label;" 
+                 tooltiptext="&watsSidebar.historyID.tooltip;"
+                 editable="false" hidden="true" />
+                <splitter class="tree-splitter"/>
+                <treecol id="history-type" cycler="true"
+                 label="&watsSidebar.historyType.label;" 
+                 tooltiptext="&watsSidebar.historyType.tooltip;"
+                 editable="false" />
+                <splitter class="tree-splitter"/>
+                <treecol id="history-scurl" hidden="true" />
+              </treecols>
+              <treechildren id="historyTreeChildren"
+                tooltip="history-tree-tooltip">
+              </treechildren>
+            </tree>
+
+          </vbox>
+        </vbox>
+        </tabpanel>
+
+      </tabpanels>
+    </tabbox>
+  </vbox>
+  </vbox>
+</window>

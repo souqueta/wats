@@ -1,0 +1,6 @@
+<!ENTITY watsOptions.history.label          "Number of SC requests saved in the history: ">
+<!ENTITY watsOptions.reports.label          "Create reports when constraints are not met">
+
+<!ENTITY watsOptions.window.title           "Preferences">
+<!ENTITY watsOptions.buttonaccept.label     "OK">
+<!ENTITY watsOptions.buttoncancel.label     "Cancel">

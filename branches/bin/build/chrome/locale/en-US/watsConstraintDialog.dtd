@@ -1,0 +1,7 @@
+<!ENTITY watsConstraintDialog.title                  "Specify your constraint">
+<!ENTITY watsConstraintDialog.menuitem1              "No type selected">
+<!ENTITY watsConstraintDialog.menuitem2              "Numeric interval (integer)">
+<!ENTITY watsConstraintDialog.menuitem3              "Numeric interval (double)">
+<!ENTITY watsConstraintDialog.menuitem4              "Specific string">
+<!ENTITY watsConstraintDialog.menuitem5              "Belongs to one of the strings">
+<!ENTITY watsConstraintDialog.menuitem6              "Regular expression">
